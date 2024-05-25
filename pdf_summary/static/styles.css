@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 80%;
+  max-width: 100%;
+}
+
+.header {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.file-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.header form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header input[type="file"] {
+  margin-top: 10px;
+  border: 1px solid #ecf0f1;
+  background-color: #34495e;
+  color: #ecf0f1;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.header button {
+  background-color: #fff;
+  color: #4caf50;
+  border: 2px solid #4caf50;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.header button:hover {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.chat-box {
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 200px;
+  margin-top: 20px;
+  color: #2c3e50;
+  max-height: 300px; /* Limitar a altura do chat */
+  overflow-y: auto; /* Adicionar rolagem vertical */
+}
+
+.input-area {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-area form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.input-area input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+.input-area button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.input-area button:hover {
+  background-color: #45a049;
+}

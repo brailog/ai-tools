@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Upload and Chat Interface</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Upload de Arquivo PDF</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+          <div class="file-upload">
+            <input type="file" name="file" accept=".pdf" required />
+            <button type="submit">Upload</button>
+          </div>
+        </form>
+      </div>
+      <div class="chat-box" id="chat-box">
+        <!-- Área para comunicação -->
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+      </div>
+      <div class="input-area">
+        {% if pdf_uploaded %}
+        <form action="/send" method="post">
+          <input
+            type="text"
+            name="text"
+            placeholder="Digite algo..."
+            required
+          />
+          <button type="submit">Enviar</button>
+        </form>
+        {% endif %}
+      </div>
+    </div>
+    <script>
+      // Função para rolar a área de chat para o final
+      function scrollToBottom() {
+        var chatBox = document.getElementById("chat-box");
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }
+      // Chamar a função quando a página for carregada
+      window.onload = scrollToBottom;
+    </script>
+  </body>
+</html>
