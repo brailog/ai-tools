@@ -1,0 +1,9 @@
+FastAPI
+PyPDF2
+langchain
+langchain_community
+openai
+tiktoken
+faiss-cpu
+sqlalchemy
+aiosqlite

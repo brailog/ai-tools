@@ -72,8 +72,8 @@ body {
   min-height: 200px;
   margin-top: 20px;
   color: #2c3e50;
-  max-height: 300px; /* Limitar a altura do chat */
-  overflow-y: auto; /* Adicionar rolagem vertical */
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 .input-area {

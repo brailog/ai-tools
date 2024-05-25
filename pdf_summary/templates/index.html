@@ -18,7 +18,6 @@
         </form>
       </div>
       <div class="chat-box" id="chat-box">
-        <!-- Área para comunicação -->
         {% for message in messages %}
         <p>{{ message }}</p>
         {% endfor %}
@@ -29,21 +28,19 @@
           <input
             type="text"
             name="text"
-            placeholder="Digite algo..."
+            placeholder="Ask something about the PDF here"
             required
           />
-          <button type="submit">Enviar</button>
+          <button type="submit">Send</button>
         </form>
         {% endif %}
       </div>
     </div>
     <script>
-      // Função para rolar a área de chat para o final
       function scrollToBottom() {
         var chatBox = document.getElementById("chat-box");
         chatBox.scrollTop = chatBox.scrollHeight;
       }
-      // Chamar a função quando a página for carregada
       window.onload = scrollToBottom;
     </script>
   </body>
